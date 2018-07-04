@@ -1,0 +1,14 @@
+{
+ "name": "ProtractorPractice",
+ "dependencies": {
+  "protractor": "^5.3.2",
+  "jasmine-data-provider": "^2.2.0",
+  "protractor-jasmine2-html-reporter": "^0.0.7"
+ },
+ "scripts": {
+  "webdriver-updateLib": "./node_modules/.bin/webdriver-manager update",
+  "startWD": "./node_modules/.bin/webdriver-manager start",
+  "protractor": "./node_modules/.bin/protractor conf.js",
+  "UpdateWDandstart": "npm run webdriver-updateLib &&npm run startWD &&npm run protractor"
+ }
+}

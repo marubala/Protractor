@@ -7,7 +7,7 @@ exports.config = {
   
   //Protractor starts the server automatically but this work only with chrome. If protractor starts the server automatically, then script will not run in Firefox and IE
   //specs: ['Testing.js','Locators.js'],
-  specs: ['Parameterization.js'],
+  specs: ['WindowHandle.js'],
 	//whatever inside onPrepare function, those are all applicable for all the specs
   onPrepare: function(){
 		
@@ -31,11 +31,11 @@ exports.config = {
 	//if you want to run only few specific test cases
 	//To run only below specs -  protractor": "./node_modules/.bin/protractor conf.js --suite Smoke" so command is npm run protractor
 	
-	suite:
+	/*suite:
 		{
 		Smoke: ['Testing.js','Locators.js']
 		},
-	
+	*/
 	params: {
 	    var1: 'Global Variable',
 	    var2: 'How are you'
@@ -47,6 +47,10 @@ exports.config = {
 	  //'browserName': 'firefox'
 	  //zoom level is set to some percentage- make it 100% error: launch IE view--->zoom -->100%
 	 // 'browserName': 'internet explorer'
+	
+	
+	// to accept unsecured SSL certs, we have use below configuration
+	//acceptUnsecuredCerts: true
 		  
 	//}
 

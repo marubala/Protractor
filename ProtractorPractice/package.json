@@ -3,7 +3,9 @@
  "dependencies": {
   "protractor": "^5.3.2",
   "jasmine-data-provider": "^2.2.0",
-  "protractor-jasmine2-html-reporter": "^0.0.7"
+  "protractor-jasmine2-html-reporter": "^0.0.7",
+  "exceljs": "^1.5.1"
+  
  },
  "scripts": {
   "webdriver-updateLib": "./node_modules/.bin/webdriver-manager update",

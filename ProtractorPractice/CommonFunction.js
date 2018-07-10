@@ -1,3 +1,5 @@
+var Excel = require('exceljs');
+
 function CommonFunction(){
 	
 	
@@ -14,6 +16,9 @@ function CommonFunction(){
     
     this.getURL = function(){
     	browser.driver.manage().window().maximize();
+    	
+    	//to send username and password as part of URL to resolve username and password pop up
+    	//browser.get('https://username:password@juliemr.github.io/protractor-demo/');
     	browser.get('https://juliemr.github.io/protractor-demo/').then(function(){
 			browser.sleep(2000);
     	})

@@ -5,12 +5,7 @@ var testData = require('./DataInput.js')
 
 describe('MyTestSuite', function(){
 
-	beforeEach(function() {
-		cmnLib.getURL();
-		
-	    });
-	
-			//browser.waitForAngularEnabled(false); //this is to turn off wait time to find angular elements. by default it is true
+				//browser.waitForAngularEnabled(false); //this is to turn off wait time to find angular elements. by default it is true
 		
 		
 
@@ -18,8 +13,15 @@ describe('MyTestSuite', function(){
 	it("MySecondTestCase",function(){
 		
 		var output;
-		cmnLib.firstInput.sendKeys(testData.TestData.firstValue);
-		cmnLib.secondInput.sendKeys(testData.TestData.secondValue);
+		cmnLib.getURL();
+		cmnLib.firstInput.sendKeys(testData.dataDrive.firstValue);
+		
+		
+		//debugging
+		//browser.pause(9899);
+		
+		
+		cmnLib.secondInput.sendKeys(testData.dataDrive.secondValue);
 		element(by.model('operator')).click().then(function(){
 			browser.sleep(3000);
 		})
@@ -28,7 +30,7 @@ describe('MyTestSuite', function(){
 		//cmnLib.Add(2,3);
 		element(by.css("h2[class='ng-binding']")).getText().then(function(text){
 			console.log(text);
-			if(text==testData.TestData.result)
+			if(text==testData.dataDrive.result)
 			{
 			console.log("Pass");
 			}
@@ -46,7 +48,7 @@ describe('MyTestSuite', function(){
 		
 		//https://jasmine.github.io/2.0/introduction
 		
-		expect(element(by.css("h2[class='ng-binding']")).getText()).toBe(testData.TestData.result);
+		expect(element(by.css("h2[class='ng-binding']")).getText()).toBe(testData.dataDrive.result);
 		expect(element(by.css("h2[class='ng-binding']")).getText()).not.toBe("9");
 		var a =10;
 		expect(a).toEqual(10);
@@ -73,11 +75,5 @@ describe('MyTestSuite', function(){
 	    expect(foo).not.toBeFalsy();
 	  });
 	  
-	  
-	  afterEach(function() {
-			console.log("The test is completed");
-			
-		    });
-	
 	
 })

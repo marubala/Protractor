@@ -7,7 +7,7 @@ exports.config = {
   
   //Protractor starts the server automatically but this work only with chrome. If protractor starts the server automatically, then script will not run in Firefox and IE
   //specs: ['Testing.js','Locators.js'],
-  specs: ['WindowHandle.js'],
+  specs: ['Testing.js'],
 	//whatever inside onPrepare function, those are all applicable for all the specs
   onPrepare: function(){
 		
@@ -31,7 +31,7 @@ exports.config = {
 	//if you want to run only few specific test cases
 	//To run only below specs -  protractor": "./node_modules/.bin/protractor conf.js --suite Smoke" so command is npm run protractor
 	
-	/*suite:
+	/*suites:
 		{
 		Smoke: ['Testing.js','Locators.js']
 		},
@@ -57,7 +57,8 @@ exports.config = {
 //run the script on multi browser
 /*multiCapabilities: [{
     browserName: 'firefox'
-  }, {
+  }, 
+  {
     browserName: 'chrome'
   }]*/
 
@@ -82,7 +83,7 @@ TO GENERATE package.json file, please execute the command 'npm init -f' from you
 TO intsall all the packages from package.json, go to directory where you have package.json, run command 'npm install'
 
 cmd to trigger test cases from package.json
-npm run protractor (scriptname)
+npm run protractor  ---------- (scriptname)
 
 
 "@types/node": "^6.0.46",
@@ -100,5 +101,28 @@ npm run protractor (scriptname)
 	    "source-map-support": "~0.4.0",
 	    "webdriver-js-extender": "^1.0.0",
 	    "webdriver-manager": "^12.0.6"
+	    
+
+
+TO RUN TEST HEADLESS
+
+
+//CHROME
+capabilities: {
+  browserName: 'chrome',
+
+  chromeOptions: {
+     args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+   }
+}
+
+//FIREFOX
+capabilities: {
+  browserName: 'firefox',
+
+  'moz:firefoxOptions': {
+     args: [ "--headless" ]
+   }
+}
 
 */

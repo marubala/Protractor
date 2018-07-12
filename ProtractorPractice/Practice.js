@@ -212,6 +212,46 @@ console.log(afterjoinstr);
 
 
 
+//Map creation
+
+const maparray = new Map();
+
+maparray.set("ele1", 89);
+
+maparray.set("ele2", 3);
+
+maparray.set("ele3", 15);
+
+console.log(maparray.get("ele2"));
+
+//Methods---> clear (Clear all the elements from array), delete (to delete any of the element), has (to check if any of the element is present), forEach ( to interate thorugh all the elements)
+
+
+//set object
+
+var mySet = new Set();
+
+mySet.add(1); // Set [ 1 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add('some text');
+
+//Methods---> clear (Clear all the elements from array), delete (to delete any of the element), has (to check if any of the element is present), forEach ( to interate thorugh all the elements)
+
+
+//Both Map and Set can store primitive Data type and Object References
+//But WeakSet stores only objects   ---- The reason we call them as WeakSet and WeakMap is these makes the weaker connection with all the elements. Hence garbage collector can remove any unused object from the set/map.
+//Similarly, WeakMap stores only objects in the Key field and value can be any data type
+
+
+
+//typeof - this returns the data type
+
+console.log(typeof 'hi');
+console.log(typeof 5);
+console.log(typeof true);
+console.log(typeof sgget);
+
 
 
 

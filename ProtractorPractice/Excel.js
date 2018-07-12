@@ -16,7 +16,7 @@ function readDataFromExcel()
     	//get row count
     	console.log(worksheet.rowCount);
     	
-    	//get col count
+    	//get column count
     	console.log(worksheet.columnCount);
 
     })
